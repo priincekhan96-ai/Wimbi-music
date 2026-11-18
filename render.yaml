@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: wimbi-music-app
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: MUREKA_API_KEY
+        sync: false

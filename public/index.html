@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="sw">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="Tengeneza nyimbo zako kwa Wimbi AI Music.">
+  <title>Wimbi — AI Music Studio</title>
+  <style>
+    :root{color-scheme:dark;--bg:#101114;--panel:#191a20;--panel2:#202127;--text:#f5f4f1;--muted:#a5a4ad;--line:#303139;--lime:#c8f169;--purple:#ae8cff;--red:#ff8c8c}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 12% 0%,#242336 0,transparent 35%),var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}button,input,textarea,select{font:inherit}button{cursor:pointer}.shell{max-width:1180px;margin:auto;padding:28px 24px 60px}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:52px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:21px;letter-spacing:-.7px}.logo{width:38px;height:38px;border-radius:13px;background:var(--lime);color:#171a10;display:grid;place-items:center;font-size:19px}.badge{color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:12px}.hero{text-align:center;margin:0 auto 34px;max-width:700px}.eyebrow{color:var(--lime);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(38px,7vw,68px);line-height:1.04;letter-spacing:-3px;margin:12px 0}.hero p{color:var(--muted);margin:0}.layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(290px,.85fr);gap:20px;align-items:start}.card{background:linear-gradient(145deg,#1c1d23,#17181d);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 18px 50px #0002}.card h2{font-size:18px;margin:0 0 20px;letter-spacing:-.4px}.field{margin-bottom:18px}.field label,.field-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:13px;font-weight:650}.hint{color:var(--muted);font-size:12px;font-weight:400}.control{width:100%;border:1px solid var(--line);border-radius:12px;background:#111216;color:var(--text);padding:12px 14px;outline:none}.control:focus{border-color:var(--lime);box-shadow:0 0 0 3px #c8f16920}.control::placeholder{color:#777781}textarea.control{min-height:105px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.toggle{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--line);background:#111216;border-radius:12px;height:46px;color:#ddd}.toggle input{accent-color:var(--lime);width:17px;height:17px}.primary{width:100%;border:0;border-radius:12px;padding:14px 18px;background:var(--lime);color:#171a10;font-weight:800;transition:.2s}.primary:hover{filter:brightness(1.07);transform:translateY(-1px)}.primary:disabled{opacity:.55;cursor:wait;transform:none}.status{display:none;margin-top:16px;border:1px solid var(--line);background:#111216;border-radius:12px;padding:13px;color:var(--muted);font-size:13px}.status.show{display:block}.status.error{color:var(--red);border-color:#713b43}.status.ok{color:var(--lime)}.result-empty{padding:30px 12px;text-align:center;border:1px dashed #3a3b43;border-radius:16px;color:var(--muted)}.disc{width:80px;height:80px;border-radius:50%;margin:0 auto 16px;background:radial-gradient(circle,#191a20 0 17%,#ae8cff 18% 21%,#38304a 22% 30%,#27232d 31% 57%,#c8f169 58% 60%,#222229 61%);display:grid;place-items:center;animation:rotate 9s linear infinite paused}.disc.playing{animation-play-state:running}@keyframes rotate{to{transform:rotate(360deg)}}.result-title{font-size:17px;font-weight:750;margin:0 0 3px}.result-sub{font-size:12px;color:var(--muted);margin:0 0 18px;word-break:break-all}audio{width:100%;height:42px;margin:5px 0 12px}.actions{display:flex;gap:9px;flex-wrap:wrap}.secondary{border:1px solid var(--line);background:#24252c;color:var(--text);border-radius:10px;padding:9px 13px;font-size:13px}.secondary:hover{border-color:#797987}.stem-box{border-top:1px solid var(--line);margin-top:20px;padding-top:18px}.stem-box h3{margin:0 0 5px;font-size:14px}.stem-box p{color:var(--muted);font-size:12px;margin:0 0 12px}.stem-controls{display:flex;gap:8px}.stem-controls select{flex:1;min-width:0}.small-btn{border:0;background:var(--purple);color:#17111f;border-radius:10px;padding:9px 12px;font-weight:750}.stem-output{margin-top:12px;color:var(--muted);font-size:12px;overflow-wrap:anywhere}.stem-output a{color:var(--lime)}.footer{text-align:center;color:#74747d;font-size:12px;margin-top:26px}.hidden{display:none!important}.spinner{display:inline-block;width:13px;height:13px;border:2px solid #ffffff44;border-top-color:var(--lime);border-radius:50%;vertical-align:-2px;margin-right:8px;animation:rotate .7s linear infinite}
+    @media(max-width:760px){.shell{padding:20px 14px 40px}.top{margin-bottom:40px}.layout{grid-template-columns:1fr}.hero{margin-bottom:25px}.hero h1{letter-spacing:-2px}.card{padding:19px}.badge{font-size:11px}}
+    @media(max-width:410px){.row{grid-template-columns:1fr}.top{margin-bottom:30px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="top"><div class="brand"><div class="logo">♫</div><span>WIMBI</span></div><div class="badge">AI MUSIC STUDIO · BETA</div></header>
+    <section class="hero"><div class="eyebrow">Muziki wako, mawazo yako</div><h1>Tengeneza wimbo<br>unaousikia kichwani.</h1><p>Eleza hisia, mtindo au hadithi — Wimbi itakusaidia kuibadilisha kuwa muziki.</p></section>
+    <section class="layout">
+      <form class="card" id="form">
+        <h2>🎛️ Unda wimbo mpya</h2>
+        <div class="field"><label for="title">Jina la wimbo <span class="hint">si lazima</span></label><input id="title" class="control" maxlength="80" placeholder="Mfano: Usiku wa Mombasa"></div>
+        <div class="field"><label for="prompt">Wimbo wako uweje? <span class="hint">eleza mtindo, hisia, ala…</span></label><textarea id="prompt" class="control" maxlength="1024" placeholder="Mfano: Wimbo wa afro-pop wenye furaha, midundo ya dansi na gitaa laini…"></textarea></div>
+        <div class="field"><label for="lyrics">Maneno ya wimbo <span class="hint">si lazima · hadi herufi 5000</span></label><textarea id="lyrics" class="control" maxlength="5000" placeholder="Bandika lyrics zako hapa. Ukiiacha tupu, AI inaweza kuandika wimbo kutokana na maelezo yako."></textarea></div>
+        <div class="row field"><div><label for="gender">Sauti</label><select class="control" id="gender"><option value="Any">Chagua yenyewe</option><option value="Female">Ya kike</option><option value="Male">Ya kiume</option></select></div><label class="toggle" for="instrumental"><input id="instrumental" type="checkbox"> Muziki bila sauti</label></div>
+        <button id="generate" class="primary" type="submit">✨ Tengeneza wimbo</button>
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+      </form>
+      <section class="card" aria-label="Matokeo"><h2>🎵 Matokeo yako</h2><div id="empty" class="result-empty"><div class="disc"></div><div>Wimbo wako utaonekana hapa</div><div class="hint" style="margin-top:5px">Jaza maelezo kushoto kisha bonyeza tengeneza.</div></div>
+        <div id="result" class="hidden"><div id="disc" class="disc"></div><p id="resultTitle" class="result-title">Wimbo mpya</p><p id="resultSub" class="result-sub"></p><audio id="audio" controls preload="none"></audio><div class="actions"><a id="download" class="secondary" download="wimbi-song.mp3">⬇ Pakua wimbo</a><button id="newSong" class="secondary" type="button">＋ Wimbo mwingine</button></div>
+          <div class="stem-box"><h3>🎚️ Tenganisha ala (stems)</h3><p>Toa vipengele vya sauti tofauti. Huenda huduma hii ikahitaji credits za ziada.</p><div class="stem-controls"><select class="control" id="stemModel"><option value="audio-separation-2">Separation 2</option><option value="audio-separation-1">Separation 1</option><option value="audio-separation-3">Separation 3</option></select><button class="small-btn" id="stemButton" type="button">Tenganisha</button></div><div class="stem-output" id="stemOutput"></div></div>
+        </div>
+      </section>
+    </section>
+    <footer class="footer">Wimbi Music · Inahitaji Mureka API key na credits kwenye hosting.</footer>
+  </main>
+<script>
+  const $ = (id) => document.getElementById(id);
+  const form = $('form'), statusBox = $('status'), generateButton = $('generate');
+  let currentAudioUrl = '', pollTimer;
+  function setStatus(message, type = '') { statusBox.className = `status show ${type}`; statusBox.innerHTML = message; }
+  function setBusy(busy) { generateButton.disabled = busy; generateButton.innerHTML = busy ? '<span class="spinner"></span>Inatengeneza…' : '✨ Tengeneza wimbo'; }
+  async function api(url, options = {}) {
+    const response = await fetch(url, { ...options, headers: { 'Content-Type': 'application/json', ...(options.headers || {}) } });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(data.error || data.message || `Hitilafu (${response.status})`);
+    return data;
+  }
+  function findTaskId(data) {
+    const keys = ['task_id','taskId','taskID','id'];
+    if (!data || typeof data !== 'object') return '';
+    for (const k of keys) if (typeof data[k] === 'string' || typeof data[k] === 'number') return String(data[k]);
+    for (const value of Object.values(data)) { if (Array.isArray(value)) { for (const item of value) { const found = findTaskId(item); if (found) return found; } } else if (value && typeof value === 'object') { const found = findTaskId(value); if (found) return found; } }
+    return '';
+  }
+  function findAudio(data) {
+    if (!data || typeof data !== 'object') return '';
+    const preferred = ['audio_url','audioUrl','audio_url_mp3','audioUrlMp3','url','file_url','fileUrl'];
+    for (const k of preferred) if (typeof data[k] === 'string' && /^https?:\/\//i.test(data[k])) return data[k];
+    for (const v of Object.values(data)) { if (Array.isArray(v)) { for (const item of v) { const found = findAudio(item); if (found) return found; } } else if (v && typeof v === 'object') { const found = findAudio(v); if (found) return found; } }
+    return '';
+  }
+  function showResult(url, title, payload) {
+    currentAudioUrl = url; $('empty').classList.add('hidden'); $('result').classList.remove('hidden'); $('resultTitle').textContent = title || 'Wimbo wako mpya'; $('resultSub').textContent = 'Wimbo umetengenezwa tayari'; $('audio').src = url; $('download').href = url; $('download').download = `${(title || 'wimbi-song').replace(/[^a-z0-9-_ ]/gi,'').trim().replace(/\s+/g,'-') || 'wimbi-song'}.mp3`;
+    try { localStorage.setItem('wimbi-last-song', JSON.stringify({url,title,at:Date.now()})); } catch {}
+    setStatus('Wimbo wako umekamilika! Unaweza kuusikiliza au kuupakua.', 'ok');
+  }
+  $('audio').addEventListener('play', () => $('disc').classList.add('playing'));
+  $('audio').addEventListener('pause', () => $('disc').classList.remove('playing'));
+  $('newSong').addEventListener('click', () => { $('result').classList.add('hidden'); $('empty').classList.remove('hidden'); $('stemOutput').textContent=''; currentAudioUrl=''; statusBox.className='status'; window.scrollTo({top:0,behavior:'smooth'}); });
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault(); clearTimeout(pollTimer);
+    const prompt = $('prompt').value.trim(), lyrics = $('lyrics').value.trim(), instrumental = $('instrumental').checked;
+    if (!prompt && !lyrics) { setStatus('Andika maelezo ya wimbo au lyrics kwanza.', 'error'); return; }
+    setBusy(true); $('stemOutput').textContent=''; setStatus('<span class="spinner"></span>Inatuma ombi kwa Wimbi…');
+    const title = $('title').value.trim() || 'Wimbo wako mpya';
+    try {
+      const created = await api('/api/generate', {method:'POST', body:JSON.stringify({prompt,lyrics,instrumental,gender:$('gender').value,title})});
+      const instantUrl = findAudio(created);
+      if (instantUrl) { showResult(instantUrl,title,created); setBusy(false); return; }
+      const id = findTaskId(created);
+      if (!id) throw new Error('Ombi limetumwa lakini server haijarudisha task ID inayotambulika. Angalia majibu ya Mureka au schema yake.');
+      const kind = instrumental ? 'instrumental' : 'song'; let attempts=0;
+      const poll = async () => {
+        attempts++;
+        if (attempts > 120) { setBusy(false); setStatus('Imepita dakika 10 bila kukamilika. Unaweza kujaribu tena baadaye.', 'error'); return; }
+        try {
+          const data = await api(`/api/tasks/${encodeURIComponent(id)}?kind=${kind}`);
+          const audioUrl = findAudio(data);
+          if (audioUrl) { showResult(audioUrl,title,data); setBusy(false); return; }
+          const state = String(data.status || data.state || data.task_status || 'inaendelea').toLowerCase();
+          if (['failed','error','cancelled','canceled'].includes(state)) throw new Error(data.message || data.error || 'Mureka imeshindwa kutengeneza wimbo.');
+          setStatus(`<span class="spinner"></span>Wimbo unatengenezwa… (${Math.min(attempts*5,600)}s)`);
+          pollTimer = setTimeout(poll, 5000);
+        } catch (e) { setBusy(false); setStatus(e.message, 'error'); }
+      };
+      setStatus('<span class="spinner"></span>Ombi limepokelewa. Wimbo unatengenezwa…'); pollTimer=setTimeout(poll,3000);
+    } catch (e) { setBusy(false); setStatus(e.message, 'error'); }
+  });
+  $('stemButton').addEventListener('click', async () => {
+    if (!currentAudioUrl) return;
+    const button=$('stemButton'), output=$('stemOutput'); button.disabled=true; button.textContent='Inatuma…'; output.textContent='Tunaomba kutenganisha stems…';
+    try {
+      const data=await api('/api/stems',{method:'POST',body:JSON.stringify({url:currentAudioUrl,model:$('stemModel').value})});
+      const links=[];
+      function collect(value,label='Stem') { if (!value) return; if (Array.isArray(value)) return value.forEach((v,i)=>collect(v,`${label} ${i+1}`)); if (typeof value==='object') { for(const [k,v] of Object.entries(value)) { if(typeof v==='string' && /^https?:\/\//i.test(v)) links.push({label:k.replace(/[_-]/g,' '),url:v}); else if(v && typeof v==='object') collect(v,k); } } }
+      collect(data);
+      output.innerHTML=links.length ? links.map(x=>`<div><a href="${x.url.replace(/&/g,'&amp;').replace(/"/g,'&quot;')}" target="_blank" rel="noopener">⬇ ${x.label}</a></div>`).join('') : 'Ombi la stems limetumwa. Jibu la Mureka halina link zinazotambulika; huenda likahitaji kuuliziwa tena kupitia dashboard.';
+    } catch(e) { output.textContent=e.message; } finally { button.disabled=false; button.textContent='Tenganisha'; }
+  });
+</script>
+</body>
+</html>
